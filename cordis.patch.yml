@@ -1,0 +1,9 @@
+# 插件自带 patch：插入条目 + 默认配置（profile 层不要再写同 id 条目）。
+#
+# reportTools 是调参开关：打开后每个 agent 会多打 N 行（逐工具 before/after，
+# 外加一行 output schema 体积）。拿够数据后改回 false，避免日志被逐条明细淹掉。
+- insert:
+    - id: tool-schema-slim
+      name: dsh-tool-schema-slim
+      config:
+        reportTools: false

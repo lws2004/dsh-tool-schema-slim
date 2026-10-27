@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Tool Schema Slim",
+    "description": "Registers scope-local shadow copies of tools with shortened prose; PTC SDK declarations shrink too."
+  }
+}

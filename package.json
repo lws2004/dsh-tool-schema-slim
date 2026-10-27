@@ -1,0 +1,57 @@
+{
+  "name": "dsh-tool-schema-slim",
+  "version": "0.1.0",
+  "description": "按 scope 注册精简的工具影子副本，压缩每步重发的工具说明（PTC 的 SDK 声明同样受益），不改任何工具行为",
+  "author": "lws2004",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "locale",
+    "icon.svg"
+  ],
+  "keywords": [
+    "deepseek",
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "token",
+    "ptc",
+    "schema"
+  ],
+  "scripts": {
+    "test": "node --test 'test/*.test.js'"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-tools": "^0.2.0-rc.1 || ^0.2.1-rc.2",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "meta": {
+    "title": "Tool Schema Slim",
+    "description": "Slims the tool documentation re-sent every step by registering scope-local shadow copies; PTC SDK declarations shrink too."
+  },
+  "homepage": "https://github.com/lws2004/deepseek-harness-plugins/tree/main/dsh-tool-schema-slim#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lws2004/deepseek-harness-plugins.git"
+  },
+  "icon": "./icon.svg"
+}
